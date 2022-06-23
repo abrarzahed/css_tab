@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+.tab-wrap {
+    width: 70%;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 50px auto;
+}
+
+.tab-wrap input[type="radio"] {
+    left: -9999px;
+    top: -9999px;
+    position: absolute;
+}
+
+.tab-wrap li {
+    float: left;
+    display: block;
+}
+
+.tab-wrap label {
+    background: #f39c12;
+    display: inline-block;
+    padding: 20px 35px;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-wrap .content {
+    background: #2c3e50;
+    padding: 15px 20px;
+    border-radius: 0 5px 5px 5px;
+    left: 0;
+    top: 50px;
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+.tab-wrap input[id^="tab"]:checked+label {
+    background:#2c3e50;
+}
+
+.tab-wrap input[id^="tab"]:checked~.content {
+    display: block;
+}
